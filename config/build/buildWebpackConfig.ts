@@ -1,12 +1,12 @@
-import webpack from "webpack";
-import { BuildOptions } from "./types/config";
-import { buildPlugins } from "./buildPlugins";
-import { buildLoaders } from "./buildLoaders";
-import { buildResolve } from "./buildResolve";
-import { buildDevServer } from "./buildDevServer";
+import webpack from 'webpack';
+import { BuildOptions } from './types/config';
+import { buildPlugins } from './buildPlugins';
+import { buildLoaders } from './buildLoaders';
+import { buildResolve } from './buildResolve';
+import { buildDevServer } from './buildDevServer';
 
 export function buildWebpackConfig(
-  options: BuildOptions
+  options: BuildOptions,
 ): webpack.Configuration {
   const { mode, paths, isDev } = options;
 
@@ -14,7 +14,7 @@ export function buildWebpackConfig(
     mode,
     entry: paths.entry,
     output: {
-      filename: "bundle.js",
+      filename: 'bundle.js',
       path: paths.build,
     },
     plugins: buildPlugins(options),

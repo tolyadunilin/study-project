@@ -1,9 +1,10 @@
-declare module "*.module.css";
-declare module "*.module.scss";
-declare module "*.jpg";
-declare module "*.png";
-declare module "*.gif";
-declare module "*.svg" {
+/* eslint-disable no-undef */
+declare module '*.module.css';
+declare module '*.module.scss';
+declare module '*.jpg';
+declare module '*.png';
+declare module '*.gif';
+declare module '*.svg' {
   const content: React.FunctionComponent<React.SVGAttributes<SVGElement>>;
   export default content;
 }
